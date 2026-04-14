@@ -1,0 +1,14 @@
+  body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #Login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
