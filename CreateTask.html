@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Tarea - TaskFlow</title>
+    <link rel="stylesheet"   href="styles.css"
+</head>
+<body>
+
+    <section id="crear-tarea" class="vista-formulario-creacion" aria-label="Creación de tarea">
+        
+        <div class="tarjeta-formulario-tarea">
+            
+            <header class="encabezado-tarjeta">
+                
+                <h1 class="titulo-principal">Nueva Tarea</h1>
+                <p class="subtitulo-descriptivo">Completa los campos para crear una actividad</p>
+            </header>
+
+            <div class="cuerpo-formulario">
+                
+                <div class="grupo-formulario-individual">
+                    <label class="etiqueta-campo" for="task-title">Título de la tarea *</label>
+                    <input class="entrada-texto-estandar" type="text" id="task-title" name="task-title" placeholder="Ej: Iniciar ramas de Git Flow">
+                </div>
+
+                <div class="grupo-formulario-individual">
+                    <label class="etiqueta-campo" for="task-desc">Descripción</label>
+                    <textarea class="entrada-area-texto" id="task-desc" name="task-desc" placeholder="Analizar la situación " ></textarea>
+                </div>
+
+                <div class="grupo-campos-en-linea">
+                    <div class="campo-mitad">
+                        <label class="etiqueta-campo" for="task-priority">Prioridad</label>
+                        <select class="entrada-seleccion-desplegable" id="task-priority" name="task-priority">
+                            <option value="">Seleccionar...</option>
+                            <option value="low"> Baja</option>
+                            <option value="medium"> Media</option>
+                            <option value="high"> Alta / Urgente</option>
+                        </select>
+                    </div>
+                    <div class="campo-mitad">
+                        <label class="etiqueta-campo" for="task-status">Estado</label>
+                        <select class="entrada-seleccion-desplegable" id="task-status" name="task-status">
+                            <option value="pending"> Pendiente</option>
+                            <option value="progress"> En progreso</option>
+                            <option value="done"> Completada</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grupo-campos-en-linea">
+                    <div class="campo-mitad">
+                        <label class="etiqueta-campo" for="task-due">Fecha límite</label>
+                        <input class="entrada-fecha-calendario" type="date" id="task-due" name="task-due">
+                    </div>
+                    <div class="campo-mitad">
+                        <label class="etiqueta-campo" for="task-assignee">Asignado a</label>
+                        <input class="entrada-texto-estandar" type="text" id="task-assignee" name="task-assignee" placeholder="Ej: Camilo Arciniegas Socha">
+                    </div>
+                </div>
+
+                <div class="grupo-formulario-individual">
+                    <label class="etiqueta-campo" for="task-tags">Etiquetas</label>
+                    <input class="entrada-texto-estandar" type="text" id="task-tags" name="task-tags" placeholder="frontend, css-grid, ingenieria">
+                </div>
+
+                <div class="contenedor-botones-accion">
+                    <a href="dashboard.html" class="boton-cancelar-secundario">Cancelar</a>
+                    <button type="button" class="boton-guardar-primario">Guardar Tarea</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
