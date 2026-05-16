@@ -13,7 +13,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+body {                                                              
     background-color: var(--main-black);
     color: var(--text-pure);
     font-family: 'Segoe UI', system-ui, sans-serif;
@@ -50,20 +50,8 @@ hr {
     border-top: 1px solid var(--surface-light);
     margin: 0;
 }
-button, .Bton {
-    background-color: var(--primary-green);
-    color: var(--main-black);
-    border: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-}
-button:hover, .Bton:hover {
+
+button:hover, .Bton:hover, .Boton_ingresar:hover {
     filter: brightness(1.1);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(57, 169, 0, 0.4);
@@ -97,6 +85,12 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     border-radius: 4px;
     font-size: 0.8rem;
 }
+
+.tag-urgente { background-color: rgba(255, 77, 77, 0.2); color: var(--danger); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; }
+.tag-progreso { background-color: rgba(255, 204, 0, 0.2); color: var(--warning); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; }
+.tag-completado { background-color: rgba(57, 169, 0, 0.2); color: var(--primary-green); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; }
+
+.Linea_que_divide_xd { border: 0; border-top: 1px solid var(--surface-light); margin: 20px 0; }
 
 @media (max-width: 768px) {
     main, .tarjeta-registro-autenticacion, .grupo-formulario-en-linea, .grupo-campos-en-linea { grid-template-columns: 1fr; }
@@ -177,7 +171,7 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     transform: translateY(-5px);
 }
 
-.vista-autenticacion, .Login_a_nuestra_Aplicacion_Web, .inicio-de-sesión-Envuelto, .vista-formulario-creacion, .contenedor-principal {
+.vista-autenticacion, .Login_a_nuestra_Aplicacion_Web, .inicio-de-sesion-Envuelto, .vista-formulario-creacion, .contenedor-principal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,8 +215,8 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     gap: 15px;
 }
 
-.entrada-formulario, .entrada-texto-estandar, .entrada-area-texto, 
-.entrada-seleccion-desplegable, .entrada-fecha-calendario, 
+.entrada-formulario, .entrada-texto-estandar, .entrada-area-texto,
+.entrada-seleccion-desplegable, .entrada-fecha-calendario,
 .Correo-input, .Contraseña-imput {
     width: 100%;
     background-color: var(--surface-light);
@@ -348,15 +342,9 @@ button, .boton-primario-bloque, .Bton_Nueva_task, .boton-guardar-primario, .Boto
     color: var(--text-pure);
 }
 
-button:hover, .Boton_ingresar:hover {
-    filter: brightness(1.1);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(57, 169, 0, 0.4);
-}
-
 .bton_Google {
-    background-color: transparent;
-    border: 1px solid #333;
+    background-color: transparent !important;
+    border: 1px solid #333 !important;
     color: var(--text-pure);
     margin-top: 10px;
 }
@@ -374,7 +362,7 @@ button:hover, .Boton_ingresar:hover {
 }
 
 .texto-Pregunta {
-    color: var(--text-dim);                                                      	
+    color: var(--text-dim);
     font-size: 0.9rem;
     margin-top: 20px;
     text-align: center;
@@ -384,23 +372,18 @@ button:hover, .Boton_ingresar:hover {
     text-align: center;
 }
 
-.cita-motivacional {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    color: var(--text-pure);
+
+.enlace-texto, .link_registrar, .enlace-boton {
+   color: var(--primary-green);
+   text-decoration: none;
 }
 
-.enlace-texto, .link_registrar, .enlace-boton { 
-   color: var(--primary-green); 
-   text-decoration: none; 
-}
-
-.seccion-visual { 
+.seccion-visual {
    background: linear-gradient(135deg, var(--main-black) 0%, var(--primary-green) 100%);
-   padding: 40px; 
-   display: flex; 
-   align-items: center; 
-   justify-content: center; 
-   color: white; 
-   text-align: center; 
+   padding: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   text-align: center;
 }
