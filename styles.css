@@ -176,3 +176,94 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     border-color: var(--primary-green);
     transform: translateY(-5px);
 }
+
+.vista-autenticacion, .Login_a_nuestra_Aplicacion_Web, .inicio-de-sesión-Envuelto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.tarjeta-registro-autenticacion, .Box_autenti {
+    background-color: var(--surface-dark);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    max-width: 1000px;
+    width: 100%;
+}
+
+.seccion-formulario, .Box_autenti {
+    padding: 40px;
+}
+
+.entrada-formulario, .entrada-texto-estandar, .entrada-area-texto, 
+.entrada-seleccion-desplegable, .entrada-fecha-calendario, 
+.Correo-input, .Contraseña-imput {
+    width: 100%;
+    background-color: var(--surface-light);
+    border: 1px solid #333;
+    padding: 12px;
+    color: var(--text-pure);
+    border-radius: 6px;
+    outline: none;
+    margin-top: 5px;
+    transition: all 0.3s;
+}
+
+.entrada-formulario:focus, .entrada-texto-estandar:focus, .Correo-input:focus, .Contraseña-imput:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 8px rgba(57, 169, 0, 0.2);
+}
+
+button, .boton-primario-bloque, .Bton_Nueva_task, .boton-guardar-primario, .Boton_ingresar, .Bton {
+    background-color: var(--primary-green);
+    color: var(--main-black);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+button:hover, .Boton_ingresar:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(57, 169, 0, 0.4);
+}
+
+.bton_Google {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: var(--text-pure);
+    margin-top: 10px;
+}
+
+.Check_Recordar {
+    accent-color: var(--primary-green);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.enlace-texto, .link_registrar, .enlace-boton { 
+   color: var(--primary-green); 
+   text-decoration: none; 
+}
+
+.seccion-visual { 
+   background: linear-gradient(135deg, var(--main-black) 0%, var(--primary-green) 100%);
+   padding: 40px; 
+   display: flex; 
+   align-items: center; 
+   justify-content: center; 
+   color: white; 
+   text-align: center; 
+}
