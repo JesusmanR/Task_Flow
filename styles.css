@@ -177,7 +177,7 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     transform: translateY(-5px);
 }
 
-.vista-autenticacion, .Login_a_nuestra_Aplicacion_Web, .inicio-de-sesion-Envuelto, .vista-formulario-creación {
+.vista-autenticacion, .Login_a_nuestra_Aplicacion_Web, .inicio-de-sesión-Envuelto, .vista-formulario-creacion, .contenedor-principal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -198,6 +198,27 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
 
 .seccion-formulario, .Box_autenti {
     padding: 40px;
+}
+
+.encabezado-formulario {
+    margin-bottom: 25px;
+}
+
+.titulo-principal {
+    font-size: 1.8rem;
+    color: var(--text-pure);
+}
+
+.subtitulo {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.formulario-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .entrada-formulario, .entrada-texto-estandar, .entrada-area-texto, 
@@ -238,6 +259,53 @@ button, .boton-primario-bloque, .Bton_Nueva_task, .boton-guardar-primario, .Boto
     color: var(--text-dim);
     font-size: 0.9rem;
     margin-bottom: 5px;
+}
+
+.grupo-formulario-en-linea {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.campo-individual {
+    flex: 1;
+}
+
+.medidor-contrasena {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 8px 0;
+}
+
+.barra-nivel-debil, .barra-nivel {
+    height: 4px;
+    flex: 1;
+    border-radius: 2px;
+    background-color: var(--surface-light);
+}
+
+.barra-nivel-debil {
+    background-color: var(--danger);
+}
+
+.etiqueta-medidor {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+}
+
+.grupo-controles-finales {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .grupo-campos-en-linea {
@@ -293,11 +361,33 @@ button:hover, .Boton_ingresar:hover {
     margin-top: 10px;
 }
 
-.Check_Recordar {
+.entrada-casilla, .Check_Recordar {
     accent-color: var(--primary-green);
     width: 16px;
     height: 16px;
     cursor: pointer;
+}
+
+.etiqueta-casilla {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+.texto-Pregunta {
+    color: var(--text-dim);                                                      	
+    font-size: 0.9rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contenido-visual {
+    text-align: center;
+}
+
+.cita-motivacional {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--text-pure);
 }
 
 .enlace-texto, .link_registrar, .enlace-boton { 
