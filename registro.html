@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro en Task Flow</title>
+    <link rel="Stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section id="registro" class="vista-autenticacion" aria-label="Registro de usuario"> 
+        <div class="contenedor-principal">
+            
+            <div class="tarjeta-registro-autenticacion">
+                
+                <div class="seccion-formulario">
+                    
+                    <span class="marca-logo">Task<strong>Flow</strong></span>
+                    
+                    <div class="encabezado-formulario">
+                        <h1 class="titulo-principal">Crear cuenta</h1>
+                        <p class="subtitulo">Únete y empieza a gestionar tus proyectos de ingeniería</p>
+                    </div>
+
+                    <form class="formulario-registro">
+                        
+                        <div class="grupo-formulario-en-linea">
+                            <div class="campo-individual">
+                                <label class="etiqueta-formulario" for="reg-nombre">Nombre</label>
+                                <input class="entrada-formulario" type="text" id="reg-nombre" name="nombre" placeholder="Ej: Camilo">
+                            </div>
+                            
+                            <div class="campo-individual">
+                                <label class="etiqueta-formulario" for="reg-apellido">Apellido</label>
+                                <input class="entrada-formulario" type="text" id="reg-apellido" name="apellido" placeholder="Ej: Ateortua">
+                            </div>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label class="etiqueta-formulario" for="reg-email">Correo electrónico</label>
+                            <input class="entrada-formulario" type="email" id="reg-email" name="email" placeholder="arroz-tactico@gmail.com">
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label class="etiqueta-formulario" for="reg-pass">Contraseña</label>
+                            <input class="entrada-formulario" type="password" id="reg-pass" name="password" placeholder="Mínimo 8 caracteres">
+
+                            <div class="medidor-contrasena">
+                                <span class="barra-nivel-debil"></span>
+                                <span class="barra-nivel"></span>
+                                <span class="barra-nivel"></span>
+                                <span class="etiqueta-medidor">Fortaleza de contraseña (analiza bien antes de poner 1234)</span>
+                            </div>
+
+                            <label class="etiqueta-formulario" for="reg-confirm">Confirmar contraseña</label>
+                            <input class="entrada-formulario" type="password" id="reg-confirm" name="confirm" placeholder="Repite tu contraseña">
+                        </div>
+
+                        <div class="grupo-controles-finales">
+                            <input class="entrada-casilla" type="checkbox" id="reg-terms" name="terms">
+                            <label class="etiqueta-casilla" for="reg-terms">Acepto los <a href="#" class="enlace-texto">términos y condiciones</a></label>
+                            
+                            <br> 
+                            
+                            <button class="boton-primario-bloque" type="button">
+                                <a href="Index.html" class="enlace-boton">Crear mi cuenta →</a>
+                            </button>
+                        </div>
+                    </form>
+
+                    <p class="texto-Pregunta">¿Ya tienes cuenta? <a href="login.html" class="enlace-texto">Inicia sesión aquí</a></p>
+                </div>
+
+                <div class="seccion-visual" aria-hidden="true">
+                    <div class="contenido-visual">
+                        <p class="cita-motivacional">"Organiza tu trabajo,<br><strong>organiza tu vida.</strong>"</p>
+                        
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
