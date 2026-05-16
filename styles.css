@@ -177,7 +177,7 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     transform: translateY(-5px);
 }
 
-.vista-autenticacion, .Login_a_nuestra_Aplicacion_Web, .inicio-de-sesión-Envuelto, .vista-formulario-creación {
+.vista-autenticacion, .Login_a_nuestra_Aplicacion_Web, .inicio-de-sesion-Envuelto, .vista-formulario-creación {
     display: flex;
     justify-content: center;
     align-items: center;
