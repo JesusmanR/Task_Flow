@@ -24,7 +24,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    background-color: var(--surface-dark);S
+    background-color: var(--surface-dark);
 }
 header a, .Nombre_App_web, .marca-logo {
     color: var(--text-pure);
@@ -171,7 +171,7 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     transform: translateY(-5px);
 }
 
-.vista-autenticacion, .Login_a_nuestra_Aplicacion_Web, .inicio-de-sesión-Envuelto, .vista-formulario-creacion, .contenedor-principal {
+.vista-autenticacion, .Login_a_nuestra_Aplicacion_Web, .inicio-de-sesion-Envuelto, .vista-formulario-creacion, .contenedor-principal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -372,11 +372,6 @@ button, .boton-primario-bloque, .Bton_Nueva_task, .boton-guardar-primario, .Boto
     text-align: center;
 }
 
-.cita-motivacional {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    color: var(--text-pure);
-}
 
 .enlace-texto, .link_registrar, .enlace-boton {
    color: var(--primary-green);
