@@ -13,7 +13,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {                                                              
+body {                                                             
     background-color: var(--main-black);
     color: var(--text-pure);
     font-family: 'Segoe UI', system-ui, sans-serif;
@@ -26,6 +26,7 @@ header {
     padding: 20px 5%;
     background-color: var(--surface-dark);
 }
+
 header a, .Nombre_App_web, .marca-logo {
     color: var(--text-pure);
     text-decoration: none;
@@ -171,7 +172,7 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     transform: translateY(-5px);
 }
 
-.vista-autenticacion, .Login_a_nuestra_Aplicacion_Web, .inicio-de-sesion-Envuelto, .vista-formulario-creacion, .contenedor-principal {
+.vista-autenticacion, .Login_a_nuestra_Aplicacion_Web, .inicio-de-sesión-Envuelto, .vista-formulario-creacion, .contenedor-principal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,7 +180,7 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     padding: 20px;
 }
 
-.tarjeta-registro-autenticacion, .Box_autenti, .tarjeta-formulario-tarea {
+.tarjeta-registro-autenticacion, .tarjeta-formulario-tarea {
     background-color: var(--surface-dark);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -190,7 +191,16 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     width: 100%;
 }
 
-.seccion-formulario, .Box_autenti {
+.Box_autenti {
+    background-color: var(--surface-dark);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    max-width: 450px;
+    width: 100%;
+    padding: 40px;
+}
+
+.seccion-formulario {
     padding: 40px;
 }
 
@@ -372,6 +382,11 @@ button, .boton-primario-bloque, .Bton_Nueva_task, .boton-guardar-primario, .Boto
     text-align: center;
 }
 
+.cita-motivacional {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--text-pure);
+}
 
 .enlace-texto, .link_registrar, .enlace-boton {
    color: var(--primary-green);
