@@ -1,64 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido a nuestro task Flow 😼</title>
-    <link  rel="Stylesheet"  href="styles.css"> 
-    <style>
-        
-      
-    </style>
+    <title>Iniciar sesión — TaskFlow</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section id="Login"  aria-label="Inicio de sesión" > 
-        <div >
-            <card >
-                <span >Task<strong>Flow</strong></span>
-                <div >
-                    <h1>Bienvenido</h1>
-                    <p>Ingresa los campos necesarios para continuar</p>
+
+    <!--
+        ERRORES CORREGIDOS:
+        1. <card> no es HTML válido → reemplazado por <div class="Box_autenti">
+        2. id="Login-email" no coincidía con for="login-email" → unificados en minúsculas
+        3. id="Login-Contraseña" no coincidía con for="login-contraseña" → id="login-contrasena"
+        4. <button><a href="..."> → enlace de navegación separado del botón de Google
+        5. href="Registarte.html" tenía typo → corregido a registro.html
+        6. href="algunlugar.html" → reemplazado por "#" (sin página real)
+        7. Etiqueta <style> vacía eliminada
+        8. Clases aplicadas a todos los elementos del formulario
+    -->
+
+    <section id="Login" class="vista-autenticacion" aria-label="Inicio de sesión">
+
+        <div class="Box_autenti">
+
+            <span class="marca-logo">Task<strong>Flow</strong></span>
+
+            <div class="encabezado-formulario">
+                <h1 class="titulo-principal">Bienvenido</h1>
+                <p class="subtitulo">Ingresa tus credenciales para continuar</p>
+            </div>
+
+            <div class="formulario-registro">
+
+                <div class="grupo-formulario">
+                    <label class="etiqueta-formulario" for="login-email">Correo electrónico</label>
+                    <input class="Correo-input" type="email" id="login-email" name="email" placeholder="arroz-tactico@gmail.com">
                 </div>
-                <div >
-                    <form>
-                        <div >
 
-                             <label  for="login-email">Ingrese su correco electronico</label>
-                             <input  type="email" id="Login-email" name="Email" placeholder="Arroz-tactico@gmail.com">
-                             </div>
-
-                        <div >
-                             <label  for="login-contraseña">Ingrese su contraseña</label>
-                             <input  type="password" id="Login-Contraseña" name="Email" placeholder="Ingrese su contraseña hyper mega ultra triplemaker secreta">
-                        </div>
-
-                        <div >
-                        <a href="algunlugar.html">¿Olvidate tu contraseña Hyper ultra mega tripletamente secreta?</a><br>  <input  type="checkbox" id="Login-check" name="Login-check">
-                        <label for="recordar">Recordar la sesión</label>   
-                        </div>                 
-                    </form>
-                    <button>
-                    <a href="Index.html"   >Ingresar</a>
-                    </button>
-
-                    <div >
-                        <button   type="Button">
-                          <a href="https://www.google.com/?hl=es&zx=1775707437840">  Ingresar con google -->G </a>
-                        </button>
-
-                      <p >¿No tienes cuenta? <a href="Registarte.html" >Registarte, es gratis</a></p>
-
-                    </div>
-
+                <div class="grupo-formulario">
+                    <label class="etiqueta-formulario" for="login-contrasena">Contraseña</label>
+                    <input class="Contraseña-imput" type="password" id="login-contrasena" name="password" placeholder="Ingresa tu contraseña">
                 </div>
-                
 
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                    <input class="Check_Recordar" type="checkbox" id="login-recordar" name="recordar">
+                    <label class="etiqueta-casilla" for="login-recordar">Recordar sesión</label>
+                    <a href="#" class="enlace-texto" style="margin-left: auto; font-size: 0.85rem;">¿Olvidaste tu contraseña?</a>
+                </div>
 
-        </card>
-    </div>
-        
+                <!-- Botón principal de ingreso: usa <a> estilizado, no <button><a> anidado -->
+                <a href="Index.html" class="Boton_ingresar">Ingresar</a>
+
+                <!-- Botón Google: clase bton_Google sobreescribe el fondo verde con transparente -->
+                <button class="bton_Google" type="button">
+                    Ingresar con Google &nbsp;→ G
+                </button>
+
+                <p class="texto-Pregunta">
+                    ¿No tienes cuenta? <a href="registro.html" class="enlace-texto">Regístrate, es gratis</a>
+                </p>
+
+            </div>
+
+        </div>
+
     </section>
-        
 
 </body>
 </html>

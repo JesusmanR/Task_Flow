@@ -3,36 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro en Task Flow</title>
-    <link rel="Stylesheet" href="styles.css">
+    <title>Registro — TaskFlow</title>
+    <!--
+        "Stylesheet" con mayúscula en rel es aceptado, pero se normaliza a minúscula
+    -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <section id="registro" class="vista-autenticacion" aria-label="Registro de usuario"> 
+    <!--
+        ERRORES CORREGIDOS:
+        1. </ul> sin <ul> de apertura → eliminado
+        2. <button><a href="Index.html">Crear mi cuenta</a></button>
+           → el <a> dentro de <button> no activa la navegación de forma fiable
+           → reemplazado por <a class="boton-primario-bloque"> que ya tiene el estilo verde en el CSS
+    -->
+
+    <section id="registro" class="vista-autenticacion" aria-label="Registro de usuario">
         <div class="contenedor-principal">
-            
+
             <div class="tarjeta-registro-autenticacion">
-                
+
+                <!-- Columna izquierda: formulario -->
                 <div class="seccion-formulario">
-                    
+
                     <span class="marca-logo">Task<strong>Flow</strong></span>
-                    
+
                     <div class="encabezado-formulario">
                         <h1 class="titulo-principal">Crear cuenta</h1>
                         <p class="subtitulo">Únete y empieza a gestionar tus proyectos de ingeniería</p>
                     </div>
 
                     <form class="formulario-registro">
-                        
+
                         <div class="grupo-formulario-en-linea">
                             <div class="campo-individual">
                                 <label class="etiqueta-formulario" for="reg-nombre">Nombre</label>
                                 <input class="entrada-formulario" type="text" id="reg-nombre" name="nombre" placeholder="Ej: Camilo">
                             </div>
-                            
                             <div class="campo-individual">
                                 <label class="etiqueta-formulario" for="reg-apellido">Apellido</label>
-                                <input class="entrada-formulario" type="text" id="reg-apellido" name="apellido" placeholder="Ej: Ateortua">
+                                <input class="entrada-formulario" type="text" id="reg-apellido" name="apellido" placeholder="Ej: Ateortúa">
                             </div>
                         </div>
 
@@ -57,25 +68,27 @@
                         </div>
 
                         <div class="grupo-controles-finales">
-                            <input class="entrada-casilla" type="checkbox" id="reg-terms" name="terms">
-                            <label class="etiqueta-casilla" for="reg-terms">Acepto los <a href="#" class="enlace-texto">términos y condiciones</a></label>
-                            
-                            <br> 
-                            
-                            <button class="boton-primario-bloque" type="button">
-                                <a href="Index.html" class="enlace-boton">Crear mi cuenta →</a>
-                            </button>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <input class="entrada-casilla" type="checkbox" id="reg-terms" name="terms">
+                                <label class="etiqueta-casilla" for="reg-terms">
+                                    Acepto los <a href="#" class="enlace-texto">términos y condiciones</a>
+                                </label>
+                            </div>
+
+                            <!-- <button><a> reemplazado: el <a> con clase boton-primario-bloque navega correctamente -->
+                            <a href="Index.html" class="boton-primario-bloque">Crear mi cuenta →</a>
                         </div>
+
                     </form>
 
-                    <p class="texto-Pregunta">¿Ya tienes cuenta? <a href="login.html" class="enlace-texto">Inicia sesión aquí</a></p>
+                    <p class="texto-Pregunta">¿Ya tienes cuenta? <a href="Login.html" class="enlace-texto">Inicia sesión aquí</a></p>
+
                 </div>
 
+                <!-- Columna derecha: visual decorativa -->
                 <div class="seccion-visual" aria-hidden="true">
                     <div class="contenido-visual">
                         <p class="cita-motivacional">"Organiza tu trabajo,<br><strong>organiza tu vida.</strong>"</p>
-                        
-                        </ul>
                     </div>
                 </div>
 

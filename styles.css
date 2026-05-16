@@ -8,17 +8,21 @@
     --danger: #ff4d4d;
     --warning: #ffcc00;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body {                                                             
+
+body {
     background-color: var(--main-black);
     color: var(--text-pure);
     font-family: 'Segoe UI', system-ui, sans-serif;
     line-height: 1.6;
 }
+
+/* ── Header ── */
 header {
     display: flex;
     justify-content: space-between;
@@ -27,15 +31,18 @@ header {
     background-color: var(--surface-dark);
 }
 
-header a, .Nombre_App_web, .marca-logo {
+/* .Nombre_App_web eliminado — se usa .marca-logo en su lugar */
+header a, .marca-logo {
     color: var(--text-pure);
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
 }
-header strong, .Nombre_App_web strong, .marca-logo strong {
+
+header strong, .marca-logo strong {
     color: var(--primary-green);
 }
+
 nav a {
     margin-left: 20px;
     font-size: 0.9rem;
@@ -43,63 +50,24 @@ nav a {
     text-decoration: none;
     transition: color 0.3s;
 }
+
 nav a:hover {
     color: var(--primary-green);
 }
+
 hr {
     border: 0;
     border-top: 1px solid var(--surface-light);
     margin: 0;
 }
 
-button:hover, .Bton:hover, .Boton_ingresar:hover {
-    filter: brightness(1.1);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(57, 169, 0, 0.4);
-}
-main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-aside {
-    background-color: var(--surface-dark);
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid var(--surface-light);
-}
-dl {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 10px;
-}
-dt { color: var(--text-dim); font-weight: bold; }
-dd { color: var(--text-pure); margin-bottom: 10px; }
-
-.tag-normal {
-    background-color: rgba(160, 160, 160, 0.2);
-    color: var(--text-dim);
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-}
-
-.tag-urgente { background-color: rgba(255, 77, 77, 0.2); color: var(--danger); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; }
-.tag-progreso { background-color: rgba(255, 204, 0, 0.2); color: var(--warning); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; }
-.tag-completado { background-color: rgba(57, 169, 0, 0.2); color: var(--primary-green); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; }
-
-.Linea_que_divide_xd { border: 0; border-top: 1px solid var(--surface-light); margin: 20px 0; }
-
-@media (max-width: 768px) {
-    main, .tarjeta-registro-autenticacion, .grupo-formulario-en-linea, .grupo-campos-en-linea { grid-template-columns: 1fr; }
-    .seccion-visual { display: none; }
-    header { flex-direction: column; gap: 10px; }
-}
-
-.Bton_Nueva_task {
+/* ── Botones ── */
+/* .Bton eliminado — nunca usado en el HTML */
+button,
+.boton-primario-bloque,
+.Bton_Nueva_task,
+.boton-guardar-primario,
+.Boton_ingresar {
     background-color: var(--primary-green);
     color: var(--main-black);
     border: none;
@@ -113,6 +81,82 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     text-align: center;
 }
 
+button:hover,
+.Boton_ingresar:hover,
+.Bton_Nueva_task:hover,
+.boton-guardar-primario:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(57, 169, 0, 0.4);
+}
+
+/* ── Layout principal (task-detail) ── */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+aside {
+    background-color: var(--surface-dark);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--surface-light);
+    align-self: start;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+
+dt { color: var(--text-dim); font-weight: bold; }
+dd { color: var(--text-pure); margin-bottom: 10px; }
+
+/* ── Tags / Badges ── */
+.tag-normal {
+    background-color: rgba(160, 160, 160, 0.2);
+    color: var(--text-dim);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.tag-urgente {
+    background-color: rgba(255, 77, 77, 0.2);
+    color: var(--danger);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.tag-progreso {
+    background-color: rgba(255, 204, 0, 0.2);
+    color: var(--warning);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.tag-completado {
+    background-color: rgba(57, 169, 0, 0.2);
+    color: var(--primary-green);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.Linea_que_divide_xd {
+    border: 0;
+    border-top: 1px solid var(--surface-light);
+    margin: 20px 0;
+}
+
+/* ── Dashboard ── */
 .dashboard-Envuelto {
     max-width: 1200px;
     margin: 40px auto;
@@ -131,11 +175,39 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     display: flex;
     gap: 10px;
     margin: 20px 0;
+    flex-wrap: wrap;
 }
 
-.Chip_activo { background-color: var(--primary-green); color: var(--main-black); border-radius: 20px; padding: 5px 15px; }
-.Chip_normal { background-color: var(--surface-dark); color: var(--text-dim); border-radius: 20px; padding: 5px 15px; border: 1px solid #333; }
+.Chip_activo {
+    background-color: var(--primary-green);
+    color: var(--main-black);
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
 
+.Chip_normal {
+    background-color: var(--surface-dark);
+    color: var(--text-dim);
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.Chip_normal:hover {
+    border-color: var(--primary-green);
+    color: var(--text-pure);
+    transform: none;
+    box-shadow: none;
+    filter: none;
+}
+
+/* ── Stat cards ── */
 .Parte_de_abajito_stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -143,16 +215,34 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     margin-bottom: 30px;
 }
 
-.Stat_card_normal, .Stat_card_verde, .Stat_card_amarilla, .Stat_card_roja {
+.Stat_card_normal,
+.Stat_card_verde,
+.Stat_card_amarilla,
+.Stat_card_roja {
     background-color: var(--surface-dark);
-    padding: 15px;
+    padding: 15px 20px;
     border-radius: 8px;
     border-left: 4px solid var(--primary-green);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .Stat_card_amarilla { border-left-color: var(--warning); }
-.Stat_card_roja { border-left-color: var(--danger); }
+.Stat_card_roja     { border-left-color: var(--danger); }
 
+.stat-numero {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.stat-etiqueta {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
+
+/* ── Tarjetas de tareas ── */
 .contenedor-tareas {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -172,7 +262,22 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     transform: translateY(-5px);
 }
 
-.vista-autenticacion, .Login_a_nuestra_Aplicacion_Web, .inicio-de-sesión-Envuelto, .vista-formulario-creacion, .contenedor-principal {
+.tarea-card h3 {
+    margin: 10px 0 8px;
+}
+
+.tarea-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* ── Vistas de autenticación y formularios centrados ── */
+/* .inicio-de-sesión-Envuelto y .Login_a_nuestra_Aplicacion_Web eliminados — duplicaban .vista-autenticacion */
+.vista-autenticacion,
+.vista-formulario-creacion,
+.contenedor-principal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,21 +285,32 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     padding: 20px;
 }
 
-.tarjeta-registro-autenticacion, .tarjeta-formulario-tarea {
+/* ── Tarjetas de autenticación ── */
+.tarjeta-registro-autenticacion {
     background-color: var(--surface-dark);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     max-width: 1000px;
     width: 100%;
 }
 
+.tarjeta-formulario-tarea {
+    background-color: var(--surface-dark);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    width: 100%;
+    padding: 40px;
+}
+
+/* Tarjeta login (solo formulario, sin sección visual) */
 .Box_autenti {
     background-color: var(--surface-dark);
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     max-width: 450px;
     width: 100%;
     padding: 40px;
@@ -204,7 +320,8 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     padding: 40px;
 }
 
-.encabezado-formulario {
+.encabezado-formulario,
+.encabezado-tarjeta {
     margin-bottom: 25px;
 }
 
@@ -213,21 +330,28 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     color: var(--text-pure);
 }
 
-.subtitulo {
+.subtitulo,
+.subtitulo-descriptivo {
     color: var(--text-dim);
     font-size: 0.9rem;
     margin-top: 5px;
 }
 
-.formulario-registro {
+/* ── Formularios ── */
+.formulario-registro,
+.cuerpo-formulario {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.entrada-formulario, .entrada-texto-estandar, .entrada-area-texto,
-.entrada-seleccion-desplegable, .entrada-fecha-calendario,
-.Correo-input, .Contraseña-imput {
+.entrada-formulario,
+.entrada-texto-estandar,
+.entrada-area-texto,
+.entrada-seleccion-desplegable,
+.entrada-fecha-calendario,
+.Correo-input,
+.Contraseña-imput {
     width: 100%;
     background-color: var(--surface-light);
     border: 1px solid #333;
@@ -237,28 +361,28 @@ dd { color: var(--text-pure); margin-bottom: 10px; }
     outline: none;
     margin-top: 5px;
     transition: all 0.3s;
+    font-family: inherit;
+    font-size: 0.95rem;
 }
 
-.entrada-formulario:focus, .entrada-texto-estandar:focus, .Correo-input:focus, .Contraseña-imput:focus {
+.entrada-area-texto {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.entrada-formulario:focus,
+.entrada-texto-estandar:focus,
+.entrada-area-texto:focus,
+.entrada-seleccion-desplegable:focus,
+.entrada-fecha-calendario:focus,
+.Correo-input:focus,
+.Contraseña-imput:focus {
     border-color: var(--primary-green);
     box-shadow: 0 0 8px rgba(57, 169, 0, 0.2);
 }
 
-button, .boton-primario-bloque, .Bton_Nueva_task, .boton-guardar-primario, .Boton_ingresar, .Bton {
-    background-color: var(--primary-green);
-    color: var(--main-black);
-    border: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-}
-
-.etiqueta-formulario, .etiqueta-campo {
+.etiqueta-formulario,
+.etiqueta-campo {
     display: block;
     color: var(--text-dim);
     font-size: 0.9rem;
@@ -268,20 +392,19 @@ button, .boton-primario-bloque, .Bton_Nueva_task, .boton-guardar-primario, .Boto
 .grupo-formulario-en-linea {
     display: flex;
     gap: 15px;
-    margin-bottom: 20px;
 }
 
 .grupo-formulario {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-bottom: 20px;
 }
 
 .campo-individual {
     flex: 1;
 }
 
+/* ── Medidor de contraseña ── */
 .medidor-contrasena {
     display: flex;
     align-items: center;
@@ -289,7 +412,8 @@ button, .boton-primario-bloque, .Bton_Nueva_task, .boton-guardar-primario, .Boto
     margin: 8px 0;
 }
 
-.barra-nivel-debil, .barra-nivel {
+.barra-nivel-debil,
+.barra-nivel {
     height: 4px;
     flex: 1;
     border-radius: 2px;
@@ -305,6 +429,7 @@ button, .boton-primario-bloque, .Bton_Nueva_task, .boton-guardar-primario, .Boto
     color: var(--text-dim);
 }
 
+/* ── Controles finales (registro) ── */
 .grupo-controles-finales {
     display: flex;
     flex-direction: column;
@@ -312,10 +437,10 @@ button, .boton-primario-bloque, .Bton_Nueva_task, .boton-guardar-primario, .Boto
     margin-top: 10px;
 }
 
+/* ── Campos en línea (create-task) ── */
 .grupo-campos-en-linea {
     display: flex;
     gap: 20px;
-    margin-bottom: 20px;
 }
 
 .campo-mitad {
@@ -323,9 +448,11 @@ button, .boton-primario-bloque, .Bton_Nueva_task, .boton-guardar-primario, .Boto
 }
 
 .grupo-formulario-individual {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
+/* ── Botones de acción del formulario ── */
 .contenedor-botones-accion {
     display: flex;
     justify-content: flex-end;
@@ -352,14 +479,25 @@ button, .boton-primario-bloque, .Bton_Nueva_task, .boton-guardar-primario, .Boto
     color: var(--text-pure);
 }
 
+/* ── Botón Google ── */
 .bton_Google {
     background-color: transparent !important;
     border: 1px solid #333 !important;
-    color: var(--text-pure);
+    color: var(--text-pure) !important;
+    width: 100%;
     margin-top: 10px;
 }
 
-.entrada-casilla, .Check_Recordar {
+.bton_Google:hover {
+    border-color: var(--primary-green) !important;
+    transform: none;
+    box-shadow: none;
+    filter: none;
+}
+
+/* ── Checkbox ── */
+.entrada-casilla,
+.Check_Recordar {
     accent-color: var(--primary-green);
     width: 16px;
     height: 16px;
@@ -371,10 +509,33 @@ button, .boton-primario-bloque, .Bton_Nueva_task, .boton-guardar-primario, .Boto
     font-size: 0.9rem;
 }
 
+/* ── Textos auxiliares ── */
 .texto-Pregunta {
     color: var(--text-dim);
     font-size: 0.9rem;
     margin-top: 20px;
+    text-align: center;
+}
+
+.enlace-texto,
+.enlace-boton {
+    color: var(--primary-green);
+    text-decoration: none;
+}
+
+.enlace-texto:hover,
+.enlace-boton:hover {
+    text-decoration: underline;
+}
+
+/* ── Sección visual (registro) ── */
+.seccion-visual {
+    background: linear-gradient(135deg, var(--main-black) 0%, var(--primary-green) 100%);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
     text-align: center;
 }
 
@@ -388,17 +549,41 @@ button, .boton-primario-bloque, .Bton_Nueva_task, .boton-guardar-primario, .Boto
     color: var(--text-pure);
 }
 
-.enlace-texto, .link_registrar, .enlace-boton {
-   color: var(--primary-green);
-   text-decoration: none;
+/* ── Nueva tarea button ── */
+.Bton_Nueva_task {
+    background-color: var(--primary-green);
+    color: var(--main-black);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }
 
-.seccion-visual {
-   background: linear-gradient(135deg, var(--main-black) 0%, var(--primary-green) 100%);
-   padding: 40px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   color: white;
-   text-align: center;
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    main,
+    .tarjeta-registro-autenticacion,
+    .grupo-formulario-en-linea,
+    .grupo-campos-en-linea {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .seccion-visual {
+        display: none;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .parte_de_arriba_filtros {
+        flex-wrap: wrap;
+    }
 }

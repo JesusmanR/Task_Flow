@@ -1,58 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >Dashboard Task Flow 😼</title>
+    <title>Dashboard — TaskFlow</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <section id="Dashboard"  aria-label="Tablero principal"> 
-        <div >
-            <div > <span >Task<strong>Flow</strong></span>
-                
-                <div >
-                    <h1>Mis Tareas <span >12</span></h1>
-                    <p>Rezando que funcione, 2026</p>
-                   <a href="Login.html">Ingresar</a>
-                     <a href="registro.html">Registrarse                    </a>
-                </div>
+    <!-- Encabezado de navegación global -->
+    <header>
+        <span class="marca-logo">Task<strong>Flow</strong></span>
+        <nav>
+            <a href="Login.html">Ingresar</a>
+            <a href="registro.html">Registrarse</a>
+        </nav>
+    </header>
 
-                <div >
-                    <button >Todas</button>
-                    <button >Activas</button>
-                    <button >Completadas</button>
-                    <button >Urgentes</button>
-                </div>
+    <hr>
 
-                <div>
-                    <a  href="create-task.html">
-                    <button >Crear Nueva Tarea</button>
-                    </a>
-                </div>
+    <section id="Dashboard" aria-label="Tablero principal">
+        <div class="dashboard-Envuelto">
 
-                <div >
-                    <article >
-                        <span >12</span>
-                        <span >Total</span>
-                    </article>
-                    <article >
-                        <span >5</span>
-                        <span >Completadas</span>
-                    </article>
-                    <article >
-                        <span >4</span>
-                        <span >En progreso</span>
-                    </article>
-                    <article >
-                        <span >3</span>
-                        <span >Pendientes</span>
-                    </article>
-                </div>
-
-                <hr >
+            <!-- Título del tablero -->
+            <div>
+                <h1>Mis Tareas <span class="Badge_conteo">12</span></h1>
+                <p style="color: var(--text-dim); margin-top: 4px;">Administra y organiza tus actividades, 2026</p>
             </div>
+
+            <!-- Filtros -->
+            <div class="parte_de_arriba_filtros">
+                <button class="Chip_activo">Todas</button>
+                <button class="Chip_normal">Activas</button>
+                <button class="Chip_normal">Completadas</button>
+                <button class="Chip_normal">Urgentes</button>
+            </div>
+
+            <!-- Botón nueva tarea -->
+            <div style="margin-bottom: 24px;">
+                <a href="create-task.html" class="Bton_Nueva_task">+ Crear Nueva Tarea</a>
+            </div>
+
+            <!-- Estadísticas -->
+            <div class="Parte_de_abajito_stats">
+                <article class="Stat_card_normal">
+                    <span class="stat-numero">12</span>
+                    <span class="stat-etiqueta">Total</span>
+                </article>
+                <article class="Stat_card_verde">
+                    <span class="stat-numero">5</span>
+                    <span class="stat-etiqueta">Completadas</span>
+                </article>
+                <article class="Stat_card_amarilla">
+                    <span class="stat-numero">4</span>
+                    <span class="stat-etiqueta">En progreso</span>
+                </article>
+                <article class="Stat_card_roja">
+                    <span class="stat-numero">3</span>
+                    <span class="stat-etiqueta">Pendientes</span>
+                </article>
+            </div>
+
+            <hr class="Linea_que_divide_xd">
+
+            <!-- Tarjetas de tareas -->
+            <div class="contenedor-tareas">
+
+                <article class="tarea-card">
+                    <span class="tag-urgente">Urgente</span>
+                    <h3>Diseñar mockup del módulo de pagos</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;">Crear wireframes de alta fidelidad en Figma para el módulo de pagos.</p>
+                    <div class="tarea-card-footer">
+                        <span class="tag-progreso">En progreso</span>
+                        <a href="task-detail.html" class="enlace-texto" style="font-size: 0.9rem;">Ver detalle →</a>
+                    </div>
+                </article>
+
+                <article class="tarea-card">
+                    <span class="tag-normal">Media</span>
+                    <h3>Iniciar ramas de Git Flow</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;">Configurar el flujo de trabajo con Git para el proyecto en equipo.</p>
+                    <div class="tarea-card-footer">
+                        <span class="tag-completado">Completada</span>
+                        <a href="task-detail.html" class="enlace-texto" style="font-size: 0.9rem;">Ver detalle →</a>
+                    </div>
+                </article>
+
+                <article class="tarea-card">
+                    <span class="tag-normal">Baja</span>
+                    <h3>Documentar endpoints de la API REST</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;">Redactar la documentación técnica de los endpoints del backend.</p>
+                    <div class="tarea-card-footer">
+                        <span class="tag-normal">Pendiente</span>
+                        <a href="task-detail.html" class="enlace-texto" style="font-size: 0.9rem;">Ver detalle →</a>
+                    </div>
+                </article>
+
+                <article class="tarea-card">
+                    <span class="tag-urgente">Alta</span>
+                    <h3>Implementar autenticación JWT</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;">Integrar tokens JWT en el backend para el manejo de sesiones.</p>
+                    <div class="tarea-card-footer">
+                        <span class="tag-progreso">En progreso</span>
+                        <a href="task-detail.html" class="enlace-texto" style="font-size: 0.9rem;">Ver detalle →</a>
+                    </div>
+                </article>
+
+            </div>
+
         </div>
     </section>
 
